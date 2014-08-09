@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/persistence" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="TimeDB" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>net.sourceforge.thegreymenstool.domain.ProjectActivityExecution</class>
+		<class>net.sourceforge.thegreymenstool.domain.ProjectActivity</class>
+		<class>net.sourceforge.thegreymenstool.domain.Project</class>
+		<class>net.sourceforge.thegreymenstool.domain.BookingElement</class>
+		<class>net.sourceforge.thegreymenstool.domain.ActivityType</class>
+	</persistence-unit>
+</persistence>

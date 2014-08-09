@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_z0L-Ya7IEd6e1PD8_m1M9g" name="DomainClasses">
+  <elementImport xmi:id="_z3BP8K7IEd6e1PD8_m1M9g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_z3UK4K7IEd6e1PD8_m1M9g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_z3UK4a7IEd6e1PD8_m1M9g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_z3UK4q7IEd6e1PD8_m1M9g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_sUluYK7KEd6e1PD8_m1M9g"/>
+  <elementImport xmi:id="_smTJcK7KEd6e1PD8_m1M9g"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fSZf4K7JEd6e1PD8_m1M9g" name="ProjectActivity">
+    <ownedAttribute xmi:id="_VjanMK7LEd6e1PD8_m1M9g" name="name" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_AawhFHxQEd-O4O2VnQlWbQ" name="activityType" type="_ESLv8K7LEd6e1PD8_m1M9g" association="_AawhEHxQEd-O4O2VnQlWbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AawhFnxQEd-O4O2VnQlWbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AawhFXxQEd-O4O2VnQlWbQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kYqPEK7JEd6e1PD8_m1M9g" name="ProjectActivityExecution">
+    <ownedAttribute xmi:id="_BgL-4K7KEd6e1PD8_m1M9g" name="startTime" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_SVTh4K7KEd6e1PD8_m1M9g" name="endTime" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oNZE8K7JEd6e1PD8_m1M9g" name="projectActivity" memberEnd="_oNZE8a7JEd6e1PD8_m1M9g _oNiO4q7JEd6e1PD8_m1M9g">
+    <ownedEnd xmi:id="_oNZE8a7JEd6e1PD8_m1M9g" name="executions" type="_kYqPEK7JEd6e1PD8_m1M9g" association="_oNZE8K7JEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-VspMLDUEd6ET8CRCX_1ww" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-VspMbDUEd6ET8CRCX_1ww"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_oNiO4q7JEd6e1PD8_m1M9g" name="projectActivity" type="_fSZf4K7JEd6e1PD8_m1M9g" association="_oNZE8K7JEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oNiO5K7JEd6e1PD8_m1M9g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oNiO467JEd6e1PD8_m1M9g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2HkEUK7KEd6e1PD8_m1M9g" name="Project">
+    <ownedAttribute xmi:id="_dJwtgK7LEd6e1PD8_m1M9g" name="name" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5p_pQK7KEd6e1PD8_m1M9g" memberEnd="_5p_pQa7KEd6e1PD8_m1M9g _5p_pRK7KEd6e1PD8_m1M9g">
+    <ownedEnd xmi:id="_5p_pQa7KEd6e1PD8_m1M9g" name="projectActivities" type="_fSZf4K7JEd6e1PD8_m1M9g" association="_5p_pQK7KEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7M2o8LDUEd6ET8CRCX_1ww" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7M2o8bDUEd6ET8CRCX_1ww"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5p_pRK7KEd6e1PD8_m1M9g" name="project" type="_2HkEUK7KEd6e1PD8_m1M9g" association="_5p_pQK7KEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5p_pRq7KEd6e1PD8_m1M9g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5p_pRa7KEd6e1PD8_m1M9g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ESLv8K7LEd6e1PD8_m1M9g" name="ActivityType">
+    <ownedAttribute xmi:id="_l7heEK7LEd6e1PD8_m1M9g" name="name" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5QknMK7LEd6e1PD8_m1M9g" name="BookingElement">
+    <ownedAttribute xmi:id="_7i-HoK7LEd6e1PD8_m1M9g" name="id" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IUn1MK7MEd6e1PD8_m1M9g" memberEnd="_IUn1Ma7MEd6e1PD8_m1M9g _IUn1NK7MEd6e1PD8_m1M9g">
+    <ownedEnd xmi:id="_IUn1Ma7MEd6e1PD8_m1M9g" name="projectActivities" type="_fSZf4K7JEd6e1PD8_m1M9g" association="_IUn1MK7MEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WiHQwAn0Ed-He_d46qbpbg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WiHQwQn0Ed-He_d46qbpbg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_IUn1NK7MEd6e1PD8_m1M9g" name="bookingElement" type="_5QknMK7LEd6e1PD8_m1M9g" association="_IUn1MK7MEd6e1PD8_m1M9g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IUn1Nq7MEd6e1PD8_m1M9g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IUn1Na7MEd6e1PD8_m1M9g"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AawhEHxQEd-O4O2VnQlWbQ" memberEnd="_AawhEXxQEd-O4O2VnQlWbQ _AawhFHxQEd-O4O2VnQlWbQ">
+    <ownedEnd xmi:id="_AawhEXxQEd-O4O2VnQlWbQ" name="projectActivity" type="_fSZf4K7JEd6e1PD8_m1M9g" association="_AawhEHxQEd-O4O2VnQlWbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AawhE3xQEd-O4O2VnQlWbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AawhEnxQEd-O4O2VnQlWbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>

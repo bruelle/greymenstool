@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="ACTIVITYTYPE">
+    <column>UID</column>
+    <column>NAME</column>
+    <row>
+      <value>5</value>
+      <value>zweiteilig</value>
+    </row>
+    <row>
+      <value>6</value>
+      <value>langweilig</value>
+    </row>
+    <row>
+      <value>101</value>
+      <value>mehrzeilig</value>
+    </row>
+  </table>
+</dataset>

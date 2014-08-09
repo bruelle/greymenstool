@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<dataset>
+	<table name="PROJECT">
+		<column>ID</column>
+		<column>NAME</column>
+		<row>
+			<value>1</value>
+			<value>Deins</value>
+		</row>
+		<row>
+			<value>10</value>
+			<value>Meins</value>
+		</row>
+	</table>
+	<table name="PROJECTACTIVITY">
+		<column>ID</column>
+		<column>NAME</column>
+		<column>ACTIVITY_UID</column>
+		<column>PROJECT_ID</column>
+		<column>BOOKINGELEMENT_UID</column>
+		<row>
+			<value>50</value>
+			<value>Surfen</value>
+			<null />
+			<value>1</value>
+			<null />
+		</row>
+		<row>
+			<value>101</value>
+			<value>Kaffeetrinken</value>
+			<null />
+			<value>1</value>
+			<null />
+		</row>
+	</table>
+</dataset>

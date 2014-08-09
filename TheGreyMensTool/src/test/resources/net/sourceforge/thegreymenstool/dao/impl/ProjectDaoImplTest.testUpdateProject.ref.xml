@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<table name="Project">
+		<column>ID</column>
+		<column>NAME</column>
+		<row>
+			<value>1</value>
+			<value>Seins</value>
+		</row>
+		<row>
+			<value>10</value>
+			<value>Meins</value>
+		</row>
+	</table>
+</dataset>

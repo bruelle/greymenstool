@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="BOOKINGELEMENT">
+    <column>UID</column>
+    <column>NAME</column>
+    <row>
+      <value>10</value>
+      <value><![CDATA[Book kurzweilig]]></value>
+    </row>
+  </table>
+</dataset>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<table name="SEQUENCE">
+		<column>SEQ_NAME</column>
+		<column>SEQ_COUNT</column>
+		<row>
+			<value>SEQ_GEN</value>
+			<value>100</value>
+		</row>
+	</table>
+</dataset>

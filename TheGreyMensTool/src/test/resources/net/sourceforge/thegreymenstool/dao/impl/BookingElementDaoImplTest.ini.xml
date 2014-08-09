@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<table name="BookingElement">
+		<column>UID</column>
+		<column>NAME</column>
+		<row>
+			<value>10</value>
+			<value>Book kurzweilig</value>
+		</row>
+		<row>
+			<value>1</value>
+			<value>Book langweilig</value>
+		</row>
+	</table>
+</dataset>

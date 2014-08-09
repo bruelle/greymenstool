@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<bean
+		class="net.sourceforge.thegreymenstool.utils.CustomPropertyPlaceholderConfigurer">
+		<property name="properties">
+			<props>
+				<prop key="database.url">jdbc:derby:${user.home}/TimeDB;create=true</prop>
+				<prop key="database.driver">org.apache.derby.jdbc.EmbeddedDriver</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="TimeDB" />
+		<property name="jpaProperties">
+			<props>
+				<prop key="javax.persistence.jdbc.url">${database.url}</prop>
+				<prop key="javax.persistence.jdbc.driver">${database.driver}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="projectDAO" class="net.sourceforge.thegreymenstool.dao.impl.ProjectDaoImpl" />
+	<bean id="activityTypeDAO"
+		class="net.sourceforge.thegreymenstool.dao.impl.ActivityTypeDaoImpl" />
+	<bean id="bookingElementDAO"
+		class="net.sourceforge.thegreymenstool.dao.impl.BookingElementDaoImpl" />
+	<bean id="projectActivityDAO"
+		class="net.sourceforge.thegreymenstool.dao.impl.ProjectActivityDaoImpl" />
+	<bean id="projectActivityExecutionDAO"
+		class="net.sourceforge.thegreymenstool.dao.impl.ProjectActivityExecutionDaoImpl" />
+
+	<bean id="projectProjectActivityController" class="net.sourceforge.thegreymenstool.utils.BidiController">
+		<constructor-arg value="projectActivities" />
+		<constructor-arg value="project" />
+	</bean>
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	<bean name="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<bean name="domainService" class="net.sourceforge.thegreymenstool.service.DomainService" />
+	<tx:annotation-driven />
+</beans>
